@@ -49,7 +49,7 @@ const rotationValues = [
   },
   
 ];
-const data = [16, 16, 16, 16, 16, 16];
+var data = [16, 16, 16, 16, 16, 16];
 var pieColors = [
   "#8b35bc",
   "#b163da",
