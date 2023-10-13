@@ -1,7 +1,7 @@
-const wheel = document.getElementById("wheel");
-const spinBtn = document.getElementById("spin-btn");
-const finalValue = document.getElementById("final-value");
-const rotationValues = [
+var wheel = document.getElementById("wheel");
+var spinBtn = document.getElementById("spin-btn");
+var finalValue = document.getElementById("final-value");
+var rotationValues = [
   { minDegree: 30, maxDegree: 30, value: 'paris is the capital of1' },
   { minDegree: 31, maxDegree: 90, value: 'paris is the capital of2' },
   { minDegree: 91, maxDegree: 150, value: 'paris is the capital of3' },
@@ -10,7 +10,7 @@ const rotationValues = [
   { minDegree: 271, maxDegree: 330, value: 'paris is the capital of6' },
   { minDegree: 331, maxDegree: 360, value: 'paris is the capital of7' },
 ];
-const data = [16, 16, 16, 16, 16, 16];
+var data = [16, 16, 16, 16, 16, 16];
 var pieColors = [
   "#8b35bc",
   "#b163da",
@@ -60,6 +60,7 @@ let count = 0;
 let resultValue = 101;
 spinBtn.addEventListener("click", () => {
   spinBtn.disabled = true;
+
  finalValue.innerHTML = `<p>Good Luck!</p>`;
   let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
   let rotationInterval = window.setInterval(() => {
@@ -77,3 +78,31 @@ spinBtn.addEventListener("click", () => {
     }
   }, 10);
 });
+
+
+
+
+
+var score = 0
+ var winningScore = 10
+        function updateScore() {
+            score++
+            document.getElementById('score').textContent = score
+            if (score >= winningScore) {
+                document.getElementById('gameStatus').textContent = 'You won!'
+            }
+        }
+        function resetScore() {
+            score = 0;
+            document.getElementById('score').textContent = score;
+            document.getElementById('gameStatus').textContent = 'Not won yet'
+        }
+        document.getElementById('increaseScore').addEventListener('click', updateScore);
+        document.getElementById('resetScore').addEventListener('click', resetScore);
+
+
+
+
+
+
+
